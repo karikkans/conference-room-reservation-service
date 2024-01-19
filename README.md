@@ -24,7 +24,6 @@ A lightweight microservice designated to reserve conference room for a given num
 2. Reserve a Conference Room
 3. Sign-up & Login APIs
 4. Supporting APIs
-   (Use Swagger UI for more details)
 
 ##### Conference Room APIs
 
