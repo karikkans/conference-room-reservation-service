@@ -40,4 +40,4 @@ logging:
     root: INFO
 app:
   security:
-    enabled: 'false'
+    enabled: false

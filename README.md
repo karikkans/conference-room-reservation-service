@@ -1,4 +1,4 @@
-# reservation-service
+# conference-room-reservation-service
 
 A lightweight microservice designated to reserve conference room for a given number of participants and time slots.
 - The application maintains the record of rooms which the user can book (configured in master table). 
@@ -20,19 +20,19 @@ the existing reservations and the maintenance schedule.
 
 #### Application APIs
 ##### Conference Room Reservation (Use Swagger UI for more details)
-- http://localhost:8090/v1/conference-room/listAvailableRooms?startTime=<startTime>&endTime=<endTime>
+- List available rooms GET - v1/conference-room/listAvailableRooms?startTime=<startTime>&endTime=<endTime>
 ![img_1.png](List_available_rooms.png)
-- http://localhost:8090/v1/conference-room/reserve
+- Reserve room POST - v1/conference-room/reserve
 ![img_2.png](Reserve_room.png)
 
 ##### User Authorization & Authentication APIs (Use Swagger UI for more detail)
-- http://localhost:8080/v1/auth/sign-up
-- http://localhost:8080/v1/auth/login
+- Sign up POST - v1/auth/sign-up
+- Login POST - v1/auth/login
 
-#### Supporting APIs (Integrated)
-- Swagger UI - http://localhost:8090/swagger-ui/
-- Swagger Docs - http://localhost:8090/v2/api-docs
-- H2 DB Console - http://localhost:8090/h2-console \
+#### Supporting APIs (Directly accesscible from Browser)
+- Swagger UI GET - swagger-ui/
+- Swagger Docs GET - v2/api-docs
+- H2 DB Console GET - /h2-console \
 ![img.png](H2_Connection_console.png)
 
 ### Assumptions & Details
