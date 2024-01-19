@@ -1,5 +1,6 @@
 package com.karikkans.reservation.filter;
 
+import com.karikkans.reservation.config.SecurityConfig;
 import com.karikkans.reservation.util.TokenUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -22,6 +23,7 @@ import static org.apache.commons.lang.StringUtils.isNotBlank;
 @AllArgsConstructor
 public class AuthFilter extends OncePerRequestFilter {
     private final UserDetailsService userDetailsService;
+    private final SecurityConfig securityConfig;
     private final TokenUtils utils;
 
     @Override
@@ -31,7 +33,7 @@ public class AuthFilter extends OncePerRequestFilter {
         String username = null;
         String token = null;
 
-        if (isNotBlank(authorization) && authorization.startsWith("Bearer ")) {
+        if (securityConfig.isEnabled() && isNotBlank(authorization) && authorization.startsWith("Bearer ")) {
             token = authorization.substring(7);
             username = utils.extractUsername(token);
         }
