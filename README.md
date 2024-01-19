@@ -3,7 +3,7 @@
 A lightweight microservice designated to reserve conference room for a given number of participants and time slots.
 - The application maintains the record of rooms which the user can book (configured in master table). 
 - It keeps the schedules of room maintenance (configured in application properties). 
-- The service looks for a suitable room for the number of participants (optimal) on a first come, first serve (FCFS) basis considering
+- The service looks for a suitable room for the number of participants (optimal) on a first-come first-serve (FCFS) basis considering
 the existing reservations and the maintenance schedule.
 - The service provides a feature of viewing the available rooms for a given time slot
 
@@ -50,4 +50,15 @@ the existing reservations and the maintenance schedule.
   &nbsp; - /login API can be used to generate fresh token in order to invoke APIs in case of token expiry.
 - Master table data is insert into the table using application start up (Refer to data.sql file in src/main/resources)
 - The combination of room id, start and end time are taken as a unique key in reservation table to ensure the consistency of reservation
+
+### How to run the service
+The application can be run either via command line or IDE such as IntelliJ/Eclipse/STS if it meets the java and maven specification mentioned above.\
+#### Using Command line
+- Build & Test : mvn clean install
+- Run the app: mvn spring-boot:run
+
+#### Using IDE (IntelliJ Spec)
+- Click on Run or Debug option in the main class (ReservationApp)\
+![img.png](Run_application.png)
+
   
