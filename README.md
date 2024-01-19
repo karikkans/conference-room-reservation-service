@@ -1,4 +1,4 @@
-# conference-room-reservation-service
+# Conference room reservation service
 
 A lightweight microservice designated to reserve conference room for a given number of participants and time slots.
 - The application maintains the record of rooms which the user can book (configured in master table). 
