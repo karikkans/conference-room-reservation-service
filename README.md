@@ -19,7 +19,7 @@ A lightweight microservice designated to reserve conference room for a given num
 ## API Specification
 
 ### Application APIs
-
+(Use Swagger UI for more details)
 1. Get available conference rooms
 2. Reserve a Conference Room
 3. Sign-up & Login APIs
@@ -45,8 +45,8 @@ A lightweight microservice designated to reserve conference room for a given num
 
 ## Assumptions
 - The booking can be done only during an allowed period. Values are configurable and read from application yaml.\
-  &nbsp; Refer to <b>reservation.minimumStartTime</b> in application yaml\
-  &nbsp; Refer to <b>reservation.maximumEndTime</b> in application yaml
+  &nbsp; - Refer to <b>reservation.minimumStartTime</b> in application yaml\
+  &nbsp; - Refer to <b>reservation.maximumEndTime</b> in application yaml
 - Dates are not considered in the APIs as the requirement is to reserve conference room for the current date.
 
 ## Implementation Details
@@ -59,7 +59,7 @@ A lightweight microservice designated to reserve conference room for a given num
 - The combination of room id, start and end time are taken as a unique key in reservation table to ensure the consistency of reservation
 
 ## How to run the service
-The application can be run either via command line or IDE such as IntelliJ/Eclipse/STS if it meets the java and maven specification mentioned above.\
+The application can be run either via command line or IDE such as IntelliJ/Eclipse/STS if it meets the java and maven specification mentioned above.
 ### Using Command line
 - Build & Test : mvn clean install
 - Run the app: mvn spring-boot:run
